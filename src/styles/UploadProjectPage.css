@@ -5,7 +5,7 @@ html, body {
   height: 100%;
   font-family: 'Inter', 'Arial', sans-serif;
   color: #e1e7ef;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; /* Allow scrolling on body */
 }
 
 /* Background Video */
@@ -36,10 +36,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%; /* Full height of the viewport */
+  justify-content: flex-start; /* Changed from center to allow scrolling */
+  min-height: 100%; /* Ensure it takes the full height */
   z-index: 1; /* Content above the video and overlay */
   text-align: center;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Portal Content */
@@ -53,6 +54,8 @@ html, body {
   width: 90%;
   max-width: 600px;
   color: #e1e7ef;
+  overflow-y: auto; /* Enable scrolling inside content if necessary */
+  max-height: 80vh; /* Prevent the content from becoming too tall */
 }
 
 /* Header Styling */
@@ -100,6 +103,8 @@ header button:active {
   padding: 20px;
   border: 1px solid rgba(99, 179, 237, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Enable scrolling inside patient list */
+  max-height: 60vh; /* Set max height to prevent overflow */
 }
 
 .patient-list h2 {
@@ -140,6 +145,30 @@ header button:active {
 
 .patient-list a:hover {
   text-decoration: underline;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 16, 23, 0.5); /* Track color */
+  border-radius: 8px; /* Rounded track corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Thumb color */
+  border-radius: 8px; /* Rounded thumb corners */
+  border: 3px solid rgba(13, 17, 23, 0.5); /* Border around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0ea5e9; /* Hover effect */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #2563eb; /* Active state */
 }
 
 /* Responsive Design */
