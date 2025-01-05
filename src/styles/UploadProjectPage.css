@@ -1,0 +1,163 @@
+/* Ensure the body and html take up full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', 'Arial', sans-serif;
+  color: #e1e7ef;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Background Video */
+.background-video {
+  position: fixed; /* Fixed position to stay in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire background */
+  z-index: -2; /* Ensure it's behind all other content */
+}
+
+/* Overlay for better content visibility */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 16, 23, 0.7); /* Dark overlay for contrast */
+  z-index: -1; /* Above the video, but below the content */
+}
+
+/* Main Container */
+.doctor-portal {
+  position: relative; /* Ensures content is above the video */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Full height of the viewport */
+  z-index: 1; /* Content above the video and overlay */
+  text-align: center;
+}
+
+/* Portal Content */
+.content {
+  background: rgba(13, 17, 23, 0.1); /* Slightly opaque background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  color: #e1e7ef;
+}
+
+/* Header Styling */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffffff 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #94a3b8;
+}
+
+header button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+}
+
+header button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(14, 165, 233, 0.3);
+}
+
+header button:active {
+  transform: translateY(0);
+}
+
+/* Patient List */
+.patient-list {
+  margin-top: 20px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(99, 179, 237, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.patient-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0ea5e9;
+}
+
+.patient-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.patient-list li {
+  margin-bottom: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid rgba(99, 179, 237, 0.1);
+}
+
+.patient-list p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #94a3b8;
+}
+
+.patient-list p strong {
+  color: #3b82f6;
+}
+
+.patient-list a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.patient-list a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .content {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .patient-list h2 {
+    font-size: 1.4rem;
+  }
+}
