@@ -139,6 +139,7 @@ input:focus {
 /* Section Styling */
 .details-section,
 .grant-access-section,
+.revoke-access-section,
 .view-details-section {
   background: rgba(15, 23, 42, 0.4);
   border-radius: 16px;

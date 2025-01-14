@@ -18,12 +18,16 @@ const HomePage = () => {
     }
   };
 
-  const handleVoterClick = () => {
-    navigate("/VoterPage"); // Navigate to the Voter page
+  const handlePatientPortalClick = () => {
+    navigate("/PatientPortal"); // Navigate to the Patient Portal
   };
 
-  const handleUploadProjectClick = () => {
-    navigate("/UploadProjectPage"); // Navigate to the Upload Project page
+  const handleDoctorPortalClick = () => {
+    navigate("/DoctorPortal"); // Navigate to the Doctor Portal
+  };
+
+  const handleAdminClick = () => {
+    navigate("/Admin"); // Navigate to the Admin page
   };
 
   return (
@@ -50,11 +54,14 @@ const HomePage = () => {
 
             {showOptions && (
               <div className="options">
-                <button className="option-btn" onClick={handleVoterClick}>
+                <button className="option-btn" onClick={handlePatientPortalClick}>
                   Patient Portal
                 </button>
-                <button className="option-btn" onClick={handleUploadProjectClick}>
+                <button className="option-btn" onClick={handleDoctorPortalClick}>
                   Doctor Portal
+                </button>
+                <button className="option-btn" onClick={handleAdminClick}>
+                  Admin Page
                 </button>
               </div>
             )}

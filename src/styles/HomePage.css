@@ -5,7 +5,7 @@
   --text-primary: #343a40; /* Dark gray for strong contrast */
   --text-secondary: #6c757d; /* Subtle gray for secondary text */
   --gradient-start: #007bff; /* Blue gradient start */
-  --gradient-end: #28a745; /* Green gradient end */
+  --gradient-end: #28a76c; /* Green gradient end */
   
   /* Typography */
   --font-primary: 'Helvetica Neue', Arial, sans-serif;
@@ -44,7 +44,7 @@ body, html {
 }
 
 .translucent-box {
-  background: rgba(255, 255, 255, 0.1); /* Translucent background */
+  background: rgba(0, 0, 0, 0.1); /* Translucent background */
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -108,8 +108,7 @@ body, html {
 }
 
 .option-btn {
-  background: white;
-  color: var(--text-primary);
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   border: 2px solid var(--primary-color);
   padding: 15px 30px;
   font-size: 1rem;
